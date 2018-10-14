@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a422ab2b-559b-47c1-abe3-a4970dbea6da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -109,39 +109,6 @@
             <path>
               <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wechatx-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wechatx-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,12 +249,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539496315231</updated>
-      <workItem from="1539496328270" duration="4628000" />
+      <workItem from="1539496328270" duration="4881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4628000" />
+    <option name="totallyTimeSpent" value="4881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="734" y="25" width="1422" height="988" extended-state="0" />
