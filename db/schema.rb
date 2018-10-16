@@ -13,14 +13,11 @@
 ActiveRecord::Schema.define(version: 20181014070416) do
 
   create_table "scans", force: :cascade do |t|
-    t.string "_id"
     t.string "_openid"
     t.string "time"
-    t.string "charSet"
     t.string "rawData"
     t.string "result"
-    t.string "scanType"
-    t.float "accuracy"
+    t.float "alt"
     t.float "lat"
     t.float "lng"
     t.datetime "created_at", null: false
