@@ -7,54 +7,49 @@ class TransferController < ApplicationController
   end
 
   def create
-    id = params[:_id]
     openid = params[:_openid]
     time = params[:time]
-    charSet = params[:charSet]
     rawData = params[:rawData]
     result = params[:result]
-    scanType = params[:scanType]
-    accuracy = params[:accuracy]
+    alt = params[:alt]
     lat = params[:lat]
     lng = params[:lng]
-    if id.length >=0 && Scan.where(:_id => id).length == 0
-      Scan.create(:_id => id,:_openid => openid,:time => time,:charSet => charSet,:rawData => rawData,
-                               :result => result,:scanType => scanType,:accuracy => accuracy,:lat => lat,:lng => lng)
-      render json: {:satus => "success"},callback: params['callback']
+    if openid && Scan.where(:_openid => openid).length == 0
+      Scan.create(:_openid => openid,:time => time,:rawData => rawData, :result => result,
+                  :alt => alt,:lat => lat,:lng => lng)
+      render json: {:status => "success",:message => "用户信息创建成功"},callback: params['callback']
     else
-      render json: {:status => "error"},callback: params['callback']
+      render json: {:status => "error",:message => "用户信息创建失败"},callback: params['callback']
     end
   end
 
   def update
-    id = params[:_id]
+    id = params[:id]
     openid = params[:_openid]
     time = params[:time]
-    charSet = params[:charSet]
     rawData = params[:rawData]
     result = params[:result]
-    scanType = params[:scanType]
-    accuracy = params[:accuracy]
+    alt = params[:alt]
     lat = params[:lat]
     lng = params[:lng]
-    if id.length >=0 && Scan.where(:_id => id).length >= 0
-      Scan.update(:_id => id,:_openid => openid,:time => time,:charSet => charSet,:rawData => rawData,
-                  :result => result,:scanType => scanType,:accuracy => accuracy,:lat => lat,:lng => lng)
-      render json: {:status => "success"},callback: params['callback']
+    if id.length >=0 && Scan.where(:id => id).length >= 0
+      Scan.update(:id => id,:_openid => openid,:time => time,:rawData => rawData, :result => result,
+                  :alt => alt,:lat => lat,:lng => lng)
+      render json: {:status => "success",:message => "用户信息更新成功"},callback: params['callback']
     else
-      render json: {:status => "error"},callback: params['callback']
+      render json: {:status => "error",:message => "用户信息更新失败"},callback: params['callback']
     end
   end
 
   def delete
-    id = params[:_id]
-    if id.length >=0 && Scan.where(:_id => id).length >= 0
+    id = params[:id]
+    if id.length >=0 && Scan.where(:id => id).length > 0
       scan = Scan.find(id)
       scan.destroy
       render json: {:status => "success"},callback: params['callback']
     else
-      render json: {:status => "error"},callback: params['callback']
-      end
+      render json: {:status => "error",:message => "该用户不存在"},callback: params['callback']
+    end
   end
 
   def destroy
