@@ -32,8 +32,9 @@ class TransferController < ApplicationController
     alt = params[:alt]
     lat = params[:lat]
     lng = params[:lng]
-    if id.length >=0 && Scan.where(:id => id).length >= 0
-      Scan.update(:id => id,:_openid => openid,:time => time,:rawData => rawData, :result => result,
+    if id.length >=0 && Scan.where(:id => id).length > 0
+      scan = Scan.find(id)
+      scan.update(:id => id,:_openid => openid,:time => time,:rawData => rawData, :result => result,
                   :alt => alt,:lat => lat,:lng => lng)
       render json: {:status => "success",:message => "用户信息更新成功"},callback: params['callback']
     else
